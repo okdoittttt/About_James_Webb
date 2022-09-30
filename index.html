@@ -1,0 +1,205 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<style>
+	li { list-style:none; }
+	.picture { list-style:none; padding:0; margin:0; }
+	.picture li { float:left; width:50%;}
+	.picture li a {display:block; margin:5px; border: 1px }
+	.picture li img { display:block; width:50%;  height:auto;}
+	.picture li img:hover { display:block; width:100%;  height:auto;} 
+
+	table {
+		text-align: center;
+		width: 50%;
+		height: auto;
+	}
+
+	table, th, td {border: 1px solid white;}
+</style>
+<body>
+<!-- ======================================================== 메인 페이지 ======================================================== -->
+<div data-theme="b">
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b">
+			<h1>James Webb Space Telescope</h1>
+		</div>
+		<div data-role="content" style="text-align:center">
+				<img src="img/james_webb_title_img.jpg">
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#intro">JWST 소개</a></li>
+				<li><a href="#movie" data-rel="dialog">JWST 영상</a></li>
+				<li><a href="#wizard3-1" data-rel="dialog">JWST 데이터의 청각화</a></li>
+				<li><a href="#gallery">갤러리</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>출처.Webb 공식 홈페이지</h1>
+		</div>
+	</div>
+	
+<!-- ======================================================== 소개 페이지 ======================================================== -->
+	<div data-role="page" id="intro" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>			
+			<h1>JWST 소개</h1>
+		</div>
+		<div data-role="content">
+				<div  style="text-align:center">
+					<img src="img/james_webb_img02.png" height="100%" width="100%">
+				</div>			
+			<div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>James Webb Space Telescope</h3>
+					<p>제임스 웹 우주 망원경(영어: James Webb Space Telescope, JWST)은 적외선 천문 관측을 주목적으로 하는 우주 망원경이다. 현존하는 광학 우주 망원경 중에서 규모가 가장 크며, 뛰어난 적외선 분해능과 감도 덕분에 허블 우주 망원경조차 관측하기 어려울 정도로 멀고 어두운 천체들을 관측할 수 있다. 이를 통해 최초의 별과 최초의 은하가 형성되는 모습을 포착하는 등 천문학과 우주론 마당에서 광범위한 연구가 가능할 것으로 기대되고 있다.</p>
+					<p>제임스 웹의 설계와 개발은 미국항공우주국(NASA)이 유럽우주국(ESA)과 캐나다우주국(CSA)과 협력하여 이끌었다. 망원경의 개발은 메릴랜드에 소재하는 NASA의 고더드우주비행센터(GSFC)가 맡았으며, 망원경의 운용은 볼티모어 존스홉킨스대학교 홈우드캠퍼스에 소재하는 우주망원경과학연구소가 하고 있다. 사업에 참여한 주요 기업으로는 노스롭 그루먼이 있다. 망원경의 명칭은 1961년부터 1968년까지 NASA 국장을 역임하며 머큐리, 제미니, 아폴로 계획을 추진한 제임스 에드윈 웨브의 이름에서 따온 것이다.</p>
+					<h3>KEY FACTS</h3>
+					<table>
+						<tbody>
+							<tr>
+								<td>출시 제안일</td>
+								<td>2021년 12월 25일 오전 7시 20분 EST</td>
+							</tr>
+							<tr>
+								<td>발사용 로켓</td>
+								<td>Ariane 5 ECA</td>
+							</tr>
+							<tr>
+								<td>임무 수행 기간</td>
+								<td>5-10년</td>
+							</tr>
+							<tr>
+								<td>총 페이로드 질량</td>
+								<td>천문대, 궤도 소모품 및 발사체 어댑터를 포함하여 약 6200kg.</td>
+							</tr>
+							<tr>
+								<td>기본 거울의 직경</td>
+								<td>약 6.5m(21.3피트)</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div data-role="collapsible">
+					<h3>특징</h3>
+					<p>제임스 웹 우주 망원경의 중량은 허블 우주 망원경 중량의 절반밖에 되지 않는다. 금으로 코팅된 베릴륨 재질의 주거울은 직경이 6.5 m (21 ft)이며, 작은 육각형 거울 열여덟 장으로 구성되어 있다. 이 거울의 총면적은 26.3 m2 (283 ft2)이지만, 0.9 m2 (9.7 ft2)가 부거울과 부거울 지지대에 가려져 있기 때문에 집광부의 총면적은 25.4 m2 (273 ft2)이다. 이는 직경 2.4미터인 허블 주경의 집광 면적 4.0 m2 (43 ft2)보다 여섯 배 이상 크다. 제임스 웹의 거울이 금으로 코팅된 것은 적외선 반사율을 높이기 위함이며, 금 코팅은 내구성 때문에 얇은 유리막으로 덮여있다.</p>
+					<p>제임스 웹 망원경은 근적외선 관측을 주목적으로 설계되었으나, 사용하는 관측 장비에 따라 주황색에서 빨간색의 가시광선도 관측할 수 있으며, 마찬가지로 중적외선 영역도 가능하다.</p>
+					<p>허블이 관측할 수 있는 것보다 100분의 1 정도로 어두운 천체까지 관측할 수 있으며, 적색편이 z≈20까지 거슬러 올라가는 우주 역사에서 이른 시대(빅뱅 이후 1억 8천만 년 무렵의 우주시)의 천체들도 관측할 수 있다</p>
+					<p>제임스 웹 망원경은 태양에 대해 85˚ 이상의 회피각에서 초당 0.03각초보다 느린 각속도로 움직이는 태양계 천체를 관측할 수 있기도 하다.</p>
+					<p>이러한 천체로는 화성, 목성, 토성, 천왕성, 해왕성, 명왕성, 앞에서 열거한 천체들의 위성, 화성 궤도 너머의 혜성, 소행성이 있다.</p>
+				</div>
+				<div data-role="collapsible" >
+					<h3>위치와 궤도</h3>
+					<p>제임스 웹 우주 망원경은 태양에 대한 지구 궤도 너머 약 1,500,000 km 떨어진 태양-지구 L2 라그랑주점을 중심으로 도는 헤일로 궤도에서 운용된다. 망원경이 공전하면서 실제 위치는 L2 점에 대해 약 250,000 km에서 832,000 km 거리까지 변화하지만, 지구와 달의 그림자에 들어가는 일은 없다. </p>
+					<p>태양과 지구의 L2 점 근처에 있는 물체는 지구와 같은 속도로 태양을 공전할 수 있기 때문에 망원경이 태양과 지구와 달에 대해 거리를 거의 일정하게 유지할 수 있으며, 차양막과 우주선 본체를 일정한 각도로 유지할 수 있다. 제임스 웹 망원경은 지구와 달의 그림자를 피하기 위해서 폭넓은 궤도를 가지기 때문에 태양을 향하는 면에서 꾸준히 태양광을 받으며 전력을 공급하고 지구와 교신하면서도 차양막을 통해 태양과 지구와 달에서 관측 장비로 오는 열과 빛을 차단하고, 지구와 달의 그림자에 들어갔을 때 우주선에 생길 수 있는 미세한 온도 변화를 피할 수 있다. 이러한 배열과 자세를 통해 우주선의 온도를 희미한 적외선 관측에 필요한 50K 아래로 일정하게 유지할 수 있다.</p>
+					<img src="img/lagrange_point.png" alt="lagrange_point">
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>독도사랑_홍길동</h1>
+		</div>		
+	</div>
+	
+<!-- ======================================================== 영상 페이지 ======================================================== -->
+	<div data-role="page" id="movie" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>JWST 영상</h1>
+		</div>
+		<div data-role="content" >
+			<div class="ui-bar ui-bar-a">JWST 미션 트레일러</div><br/>
+			<li>
+				<iframe width="100%" height="315" src="https://www.youtube.com/embed/Gs1pTsMhhDw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</li><br/>
+			<div class="ui-bar ui-bar-a">JWST 전개 시퀀스</div><br/>
+			<li>
+				<iframe width="100%" height="315" src="https://www.youtube.com/embed/RzGLKQ7_KZQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</li><br/>
+			<div class="ui-bar ui-bar-a">JWST L2 point 궤도</div><br/>
+			<li>
+				<iframe width="100%" height="315" src="https://www.youtube.com/embed/ybn8-_QV8Tg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</li>
+		</div>
+		<div data-role="footer" data-theme="b">
+		</div>
+	</div>
+	
+<!-- ======================================================== 음원 페이지 ======================================================== -->	
+<div data-role="page" id="wizard3-1">
+	<div data-role="header">
+		<h1>카리나 성운의 우주절벽</h1>
+	</div>
+	<div data-role="content">
+		<div class="ui-bar ui-bar-e">카리나 성운의 우주절벽</div><br/>
+		<audio controls width="100%" preload="metadata">
+			<source src="content/Cosmic_Cliffs_in_the_Carina_Nebula.mp3" type="audio/mp3">
+		</audio>	
+		<img src="img/carina.png" width="100%" height="auto">
+	</div>
+	<div data-role="footer">
+		<a href="#home"  data-direction="reverse">이전</a>
+		<a href="#wizard3-2" data-rel="dialog" data-transition="slide">다음</a>
+	</div>
+</div>
+
+<div data-role="page" id="wizard3-2">
+	<div data-role="header">
+		<h1>우주절벽: 하늘</h1>
+	</div>
+	<div data-role="content">
+		<div class="ui-bar ui-bar-e">우주절벽: 하늘</div><br/>
+		<audio controls width="100%" preload="metadata">
+			<source src="content/sky.mp3" type="audio/mp3">
+		</audio>			
+		<img src="img/carina02.png" alt="" width="100%">
+	</div>
+	<div data-role="footer">
+		<a href="#wizard3-1"  data-direction="reverse">이전</a>
+		<a href="#home">처음</a>
+	</div>
+</div>
+
+<!-- ======================================================== 사진 페이지 ======================================================== -->	
+	<div data-role="page" id="gallery"  data-theme="b">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>갤러리</h1>
+		</div>
+		<div data-role="content">
+			<div class="container">
+				<div class="card">
+				  <img src="img/SouthernRingNebula.png">
+				  <div class="card__head">Southern Ring Nebula(남쪽 고리 성운)</div>
+				</div>
+				<div class="card">
+				  <img src="img/carina.png">
+				  <div class="card__head">Carina Nebula(카리나 성운)</div>
+				</div>
+				<div class="card">
+				  <img src="img/stephan.png">
+				  <div class="card__head">Stephan's Quintet(스테판의 오중주)</div>
+				</div>
+				<div class="card">
+				  <img src="img/Deep_Field.png">
+				  <div class="card__head">Deep Field(딥 필드)</div>
+				</div>
+				<div class="card">
+				  <img src="img/Neptune.png">
+				  <div class="card__head">Neptune(혜왕성)</div>
+				</div>
+			  </div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>출처.Webb 공식 홈페이지</h1>
+		</div>		
+	</div>
+</div>	
+</body>
+</html>
