@@ -2,8 +2,8 @@
 ==========================
 
 #### [모든 이미지 출처](https://webbtelescope.org)
-#### [Github URL](link)
-#### [Netify URL](link)
+#### [Github URL](https://okdoittttt.github.io/About_James_Webb/)
+#### [Netify URL](https://bespoke-sprinkles-dd0e91.netlify.app)
 
 ---------------------------------------
 ![Alt text](/img/SC%202022-09-30%20%EC%98%A4%ED%9B%84%203.14.36.png)
