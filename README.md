@@ -6,11 +6,11 @@
 #### [Netify URL](https://bespoke-sprinkles-dd0e91.netlify.app)
 
 # 하이브리드 앱 완료 화면
-![Alt text](/img/mm1 (1).png)
-![Alt text](/img/mm1 (2).png)
-![Alt text](/img/mm1 (3).png)
-![Alt text](/img/mm1 (4).png)
-![Alt text](/img/mm1 (5).png)
+![Alt text](/img/mm1.png)
+![Alt text](/img/mm2.png)
+![Alt text](/img/mm3.png)
+![Alt text](/img/mm4.png)
+![Alt text](/img/mm5.png)
 
 ---------------------------------------
 ![Alt text](/img/SC%202022-09-30%20%EC%98%A4%ED%9B%84%203.14.36.png)
